@@ -21,5 +21,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    ofSerial serial; // 아두이노에서 시리얼 신호를 받아옴    
+    ofSerial serial; // 아두이노에서 시리얼 신호를 받아옴
+    //ofVideoPlayer video; // 영상 파일을 다루는 변수
 };
