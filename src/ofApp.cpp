@@ -10,11 +10,11 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    unsigned char sensorTmp;
-    if(serial.available()){
-        sensorTmp = serial.readByte();
-        if(sensorTmp == '3'){
-            cout << "GET!" << endl;
+    unsigned char sensorTmp; //임시로 캐릭터 변수(char)를 하나 만들어 주고
+    if(serial.available()){ //시리얼에 값이 들어왔다면 if문을 실행한다.
+        sensorTmp = serial.readByte(); //시리얼 값을 하나 받아서 sensorTmp 변수에 넣어 준다.
+        if(sensorTmp == '3'){ //값이 3(캐릭터) 이라면
+            cout << "GET!" << endl; //콘솔에 출력한다.
         }
     }
     serial.flush();
