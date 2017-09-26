@@ -14,10 +14,15 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     unsigned char sensorTmp; //임시로 캐릭터 변수(char)를 하나 만들어 주고
+    //unsigned char tmp[20] = {}; //값 손실에 대한 설명
+    
     if(serial.available()){ //시리얼에 값이 들어왔다면 if문을 실행한다.
+      //  serial.readBytes(tmp, 20);
+     //    cout << tmp << endl;
         sensorTmp = serial.readByte(); //시리얼 값을 하나 받아서 sensorTmp 변수에 넣어 준다.
+        cout << sensorTmp << endl;
         if(sensorTmp == 'a'){ //값에 따라
-            cout << "GET!" << endl; //콘솔에 출력한다.
+        //    cout << "GET!" << endl; //콘솔에 출력한다.
             //video.play();
         }
     }
